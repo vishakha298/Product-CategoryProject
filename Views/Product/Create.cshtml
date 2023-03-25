@@ -1,0 +1,39 @@
+﻿@model CrudApplication1.Models.Product
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-2">
+            <div class="card">
+                <div class="card-header">
+            
+<h1 class="text-center text-primary">Add product</h1>
+</div>
+<div class="card-body">
+    <form method="post" asp-action="Create">
+        <div class="form-group">
+            <label asp-for="PName"></label>
+            <input type="text" asp-for="PName" class="form-control"
+            placeholder="enter your product name"/>
+            <span asp-validation-for="PName" class="text-danger"></span>
+            </div>
+                        <div class="form-group">
+                            <label asp-for="CName"></label>
+                            <input type="text" asp-for="CName" class="form-control"
+                                   placeholder="enter your category name" />
+                            <span asp-validation-for="CName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" value="submit" class="btn btn=sm btn-outline-success floatright"/>
+                                   
+                                   </div>
+
+    </form>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+

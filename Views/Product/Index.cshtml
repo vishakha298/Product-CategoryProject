@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@model IEnumerable<CrudApplication1.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+
+}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="text-center text-primary">Product List</h1>
+            <a class="btn btn-success m-1" asp-controller="Product" asp-action="Create">Create</a>
+            <p class="text-center text-success">@TempData["error"]</p>
+            <table class="table table-bordered">
+                <tr class="text-center">
+                    <th>ProductId</th>
+                    <th>ProductName</th>
+                    <th>CategoryId</th>
+                    <th>CategoryName</th>
+                    <th>Action</th>
+                </tr>
+                @foreach(var d in Model)
+                    {
+                        <tr class="text-center">
+                            <td>@d.Id</td>
+                            <td>@d.PName</td>
+                            <td>@d.Id1</td>
+                            <td>@d.CName</td>
+                            <td>
+                                <a class="btn btn-sm btn-warning asp-controller="Product" asp-action="Edit" 
+                                asp-route-id="@d.Id">Edit</a>
+                                <a class="btn btn-sm btn-warning asp-controller="Product" asp-action="Delete"
+                               asp-route-id="@d.Id">Delete</a>
+                            </td>
+                        </tr>
+                        
+                    }
+                </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model CrudApplication1.Models.Product
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-2">
+            <div class="card" >
+                <div class="card-header">
+
+                    <h1 class="text-center text-primary">Edit product</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Edit">
+                        <div class="form-group">
+                            <label asp-for="PName"></label>
+                            <input type="hidden" asp-for="Id"/>
+                            <input type="text" asp-for="PName" class="form-control"
+                                   placeholder="enter your product name" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CName"></label>
+                            <input type="text" asp-for="CName" class="form-control"
+                                   placeholder="enter your category name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="button" value="submit" class="btn btn=sm btn-outline-success floatright" />
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
